@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import {ContainerLogin} from "./StyleLogin"
+import {ContainerLogin, StyleBoxAboutSite, StyleBoxLogin, StyleBoxSocialLinks} from "./StyleLogin"
 import google_button from "../../assets/button_google.png"
 import facebook_button from "../../assets/button_facebook.png"
 import apple_button from "../../assets/button_apple.png"
@@ -22,23 +22,23 @@ function LoginPage(){
     {image: apoie_mentor_icon,
     description: "Apoie como um mentor no ensino de pessoas autistas"},
     {image: aprenda_icon,
-    description: "Aprenda tecnologia com o apoio de mentores especializados na educação inclusiva"},]
+    description: "Aprenda tecnologia com o apoio de mentores especializados"},]
 
     return(
 
         <ContainerLogin>
-            <div>
-              <div>
+            <StyleBoxAboutSite>
+              <div className="box_about">
                 <h1>Olá, o que te traz ao XXX?</h1>
                 <h3>Faça parte de uma comunidade onde você pode criar conexões entre mentorando e mentor e aprender sobre tecnologia da melhor forma.</h3>
 
               </div>
-              <div>
+              <div className="box_icons_login">
                   {icons_login.map((icon)=>{
                     return(
                       <div>
                         <img src={icon.image} alt="icone_login"/>
-                        <h2>{icon.description}</h2>
+                        <p>{icon.description}</p>
                       </div>
                     )
                   })}
@@ -46,9 +46,9 @@ function LoginPage(){
 
               </div>
 
-            </div>
-            <div>
-                <div>
+            </StyleBoxAboutSite>
+            <StyleBoxLogin>
+                <div className="box_form_login">
                     <h1>Bem vindo!</h1>
                     <h2>Cadastre-se</h2>
 
@@ -57,20 +57,20 @@ function LoginPage(){
                     <p>Senha</p>
                     <input/>
 
-                    <button>&gt;</button>
+                    <button><h1>&gt;</h1></button>
                 </div>
-                <div>
+                <div className="box-style-continue">
                     <div></div>
                       <p>Continuar com</p>
                     <div></div>
                 </div>
     
-                <div>
-                    <div className="social_links_mobile">
+                <StyleBoxSocialLinks>
+                    {/* <div className="social_links_mobile">
                         <img src={google_button_mobile} alt="botao_login_google"/>
                         <img src={facebook_button_mobile} alt="botao_login_facebook"/>
                         <img src={apple_button_mobile} alt="botao_login_apple"/>
-                    </div>
+                    </div> */}
                   
                     <div className="social_links">
                         <img src={google_button} alt="botao_login_google"/>
@@ -79,9 +79,9 @@ function LoginPage(){
                     </div>
                     <p>Já tem uma conta? <a href="#">Entrar</a></p>
 
-                </div>
+                </StyleBoxSocialLinks>
 
-            </div>
+            </StyleBoxLogin>
         </ContainerLogin>
     )
 }

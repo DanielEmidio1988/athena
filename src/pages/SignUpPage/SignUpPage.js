@@ -112,42 +112,77 @@ function SignUpPage(){
                 <>
                 <div>
                         <div>
-                            <p></p>
+                            <p>Formação Acadêmica</p>
                             <input/>
                         </div>
                         <div>
-                            <p></p>
+                            <p>Especialidade Principal</p>
                             <input/>
                         </div>
                         <div>
-                            <p></p>
+                            <p>Quais disciplinas são relevantes em suas especialidades?</p>
                             <input/>
                         </div>
                         <div>
-                            <p></p>
+                            <p>Quais Ferramentas você possui experiência?</p>
+                            <input/>
+                        </div>
+                        <div>
+                            <p>Você possui capacitação para ensinar pessoas com deficiência cognitiva / neurodivergência ou que precise de um apoio educacional mais especializado e inclusivo?</p>
                             <input/>
                         </div>
                 </div>
                 <div>
                         <div>
-                            <p></p>
+                            <p>Quantos anos de experiência você possui?</p>
                             <input/>
                         </div>
                         <div>
-                            <p></p>
+                            <p>URL do LinkedIn</p>
                             <input/>
                         </div>
                         <div>
-                            <p></p>
+                            <p>Especialidade</p>
                             <input/>
                         </div>
                         <div>
-                            <p></p>
+                            <p>Quais softSkills você domina?</p>
                             <input/>
                         </div>
                 </div>
                 </>
 
+                :
+                ""}
+                {optionDesire === "Desejo Aprender com Especialistas" ?
+                <>
+                <div>
+                        <div>
+                            <p>Informações sobre a deficiência cognitiva/neurodivergência</p>
+                            <input/>
+                        </div>
+                        <div>
+                            <p>Preferencias de aprendizagem</p>
+                            <input/>
+                        </div>
+                        <div>
+                            <p>Quais as necessidades de suporte?</p>
+                            <input/>
+                        </div>
+
+                </div>
+                <div>
+                        <div>
+                            <p>Informações adicionais sobre as necessidades ou desafios especificos relacionados a deficiência cognitiva</p>
+                            <input/>
+                        </div>
+                        <div>
+                            <p>Comentários ou informações adicionais</p>
+                            <input/>
+                        </div>
+    
+                </div>
+                </>
                 :
                 ""}
                         

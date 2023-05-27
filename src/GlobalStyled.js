@@ -5,6 +5,7 @@ export const GlobalStyled = createGlobalStyle`
         margin: 0;
         padding: 0;
         border-box: box-sizing;
-        font-family: 'Poppins', sans-serif
+        font-family: 'Poppins', sans-serif;
+        color: #00203F;
     }    
 `
