@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { ContainerSignUp, StyleBoxForm, StyleBoxDesire, StyleDesireSelect } from "./StyleSignUpPage"
 import button_desejo_aprender_especialistas from "../../assets/heroicons_puzzle-piece-20-solid.png"
 import button_desejo_compartilhar from "../../assets/heroicons-solid_share.png"
 import button_desejo_ensinar from "../../assets/fa-solid_chalkboard-teacher.png"
@@ -6,111 +7,126 @@ import button_desejo_aprender from "../../assets/fluent_people-community-24-fill
 
 function SignUpPage(){
 
-    const iconsDesire = [
+    const [iconsDesire, setIconsDesire] = useState([
         {image: button_desejo_aprender,
         description: "Desejo aprender",
         status: false},
         {image: button_desejo_ensinar,
         description: "Desejo ensinar",
         status: false},
-        {image: button_desejo_compartilhar,
-        description: "Desejo compartilhar e ensinar conteúdos",
-        status: false},
         {image: button_desejo_aprender_especialistas,
         description: "Desejo aprender com apoio de especialistas",
-        status: false}
-    ]
+        status: false},
+        {image: button_desejo_compartilhar,
+        description: "Desejo compartilhar conteúdos",
+        status: false},
 
+    ])
     const [optionDesire, setOptionDesire] = useState("")
 
-    return(
-        <section>
-            <div>
-                <div>
-                    <h1>PERFIL</h1>
+    const selectIcon = (optionSelect) =>{
+        optionSelect.description === optionDesire? setOptionDesire("") : setOptionDesire(optionSelect.description)
+        if(!optionSelect.status){
+            const newStatus = [...iconsDesire]
+            
+            for(let i=0;i<newStatus.length;i++){
+                if(newStatus[i].description !== optionSelect.description){
+                    newStatus[i] = {...newStatus[i], status: false}
+                }else{
+                    newStatus[i] = {...newStatus[i], status: true}
+                }
+            }
+            setIconsDesire(newStatus)
+        }
+        
+    }
 
-                    <div>
-                        <div>
+    return(
+        <ContainerSignUp>
+            <h1>PERFIL</h1>
+            <StyleBoxForm>
+                
+                <div className="box-form-user">
+                    <div className="box_data_form">
+                        <div className="input-very-large">
                             <p>Nome Completo</p>
                             <input/>
                         </div>
-                        <div>
+                        <div className="input-very-large">
                             <p>E-mail</p>
                             <input/>
                         </div>
-                        <div>
+                        <div className="input-very-large">
                             <p>Confirmar e-mail</p>
                             <input/>
                         </div>
-                        <div>
+                        <div className="input-very-large">
                             <p>Senha</p>
                             <input/>
                         </div>                        
                     </div>
-                    <div>
-                        <div>
+                    <div className="box_data_form">
+                        <div className="input-large">
                             <p>Data de nascimento</p>
                             <input/>
                         </div>
-                        <div>
+                        <div className="=input-medium">
                             <p>Gênero</p>
                             <input/>
                         </div>
-                        <div>
+                        <div className="=input-medium">
                             <p>Cidade</p>
                             <input/>
-                        </div>
-                        <div>
-                            <p>Cidade</p>
-                            <input/>
-                        </div>                        
+                        </div>                       
                     </div>
-                    <div>
-                        <div>
+                    <div className="box_data_form">
+                        <div className="input-large">
                             <p>CPF</p>
                             <input/>
                         </div>
-                        <div>
+                        <div className="input-large">
                             <p>Numero de Celular</p>
                             <input/>
                         </div>
-                        <div>
+                        <div className="input-small">
                             <p>UF</p>
                             <input/>
                         </div>
                        
                     </div>
                 </div>
-                <div>
+                <div className="box-photo-user">
 
-                    <div>
-                        <div>
+                    
+                    <div className="border-photo">
+                        <div className="area-photo">
 
                         </div>
                     </div>
 
                 </div>
-            </div>
-            <div>
-                <div>
+            </StyleBoxForm>
+            <StyleBoxDesire>
+                <div className="box-title-desire">
                     <h2>O que você deseja?</h2>
                 </div>
-                <div>
-                        {iconsDesire.map((icon)=>{
-                            return(
-                                <div>
-                                    <img src={icon.image} alt="botão desejo plataforma"/>
-                                    <h2>{icon.description}</h2>
-                                </div>
-                            )
-                        })}
+                <div className="box_cards_desires">
+
+                    {iconsDesire.map((icon)=>{
+                        return(
+                            <div key={icon.description} className={icon.status ? "active-icon" : "disabled-icon"} onClick={()=>selectIcon(icon)}>
+                            <img src={icon.image} alt="botão desejo plataforma"/>
+                            <h2>{icon.description}</h2>
+                            </div>
+                        )
+                    })}                                             
                 </div>
 
-            </div> 
-            <div>
-                {optionDesire === "Desejo Ensinar" ?
+            </StyleBoxDesire> 
+            <StyleDesireSelect>
+                {optionDesire === "Desejo ensinar" ?
                 <>
-                <div>
+                <div className="box_input_A">
                         <div>
                             <p>Formação Acadêmica</p>
                             <input/>
@@ -127,12 +143,12 @@ function SignUpPage(){
                             <p>Quais Ferramentas você possui experiência?</p>
                             <input/>
                         </div>
-                        <div>
+                        <div className="input-small">
                             <p>Você possui capacitação para ensinar pessoas com deficiência cognitiva / neurodivergência ou que precise de um apoio educacional mais especializado e inclusivo?</p>
                             <input/>
                         </div>
                 </div>
-                <div>
+                <div className="box_input_B">
                         <div>
                             <p>Quantos anos de experiência você possui?</p>
                             <input/>
@@ -154,9 +170,9 @@ function SignUpPage(){
 
                 :
                 ""}
-                {optionDesire === "Desejo Aprender com Especialistas" ?
+                {optionDesire === "Desejo aprender com apoio de especialistas" ?
                 <>
-                <div>
+                <div className="box_input_A">
                         <div>
                             <p>Informações sobre a deficiência cognitiva/neurodivergência</p>
                             <input/>
@@ -171,7 +187,7 @@ function SignUpPage(){
                         </div>
 
                 </div>
-                <div>
+                <div className="box_input_B">
                         <div>
                             <p>Informações adicionais sobre as necessidades ou desafios especificos relacionados a deficiência cognitiva</p>
                             <input/>
@@ -186,8 +202,8 @@ function SignUpPage(){
                 :
                 ""}
                         
-            </div>  
-        </section>
+            </StyleDesireSelect>  
+        </ContainerSignUp>
     )
 }
 

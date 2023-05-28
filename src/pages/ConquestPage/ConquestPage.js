@@ -1,9 +1,10 @@
-import CardUser from "../../components/Cards/CardUser"
+import CardConquest from "../../components/Cards/CardConquest"
 import LateralMenu from "../../components/LateralMenu/LateralMenu"
 import { ContainerPages } from "../../constants/StylePages"
+import ProgressCard from "../../components/ProgressCard/ProgressCard"
 
 
-function HomePage(){
+function ConquestPage(){
     return(
         <ContainerPages>
             <div className="box-menu-lateral">
@@ -12,13 +13,19 @@ function HomePage(){
             <div className="box-main-menu">
                 <div className="box-title-page">
                     <img src={''} alt="Foto Usuario"/>
-                    <h1>Aulas</h1>
+                    <h1>Conquistas</h1>
                 </div>
-                <div className="box-input-data">
-                    <input placeholder="Buscar aula"/>
+                <div className="box-progress-user">
+                    <ProgressCard/>
+                    <ProgressCard/>
+                    <div className="total-points-user">
+                        <h2>Seus pontos: </h2><h1>80</h1>
+                    </div>
+                    
                 </div>
                 <div className="box-data-page">
-                    <CardUser/>
+                    <CardConquest/>
+                    <CardConquest/>
                 </div>
             </div>
         
@@ -26,4 +33,4 @@ function HomePage(){
     )
 }
 
-export default HomePage
+export default ConquestPage

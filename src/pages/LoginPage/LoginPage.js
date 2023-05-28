@@ -10,6 +10,7 @@ import compartilhe_icon from "../../assets/fluent_people-community-24-filled.png
 import apoie_icon from "../../assets/fa-solid_chalkboard-teacher.png"
 import apoie_mentor_icon from "../../assets/heroicons_puzzle-piece-20-solid.png"
 import aprenda_icon from "../../assets/aprenda_icon.png"
+import { goToHomePage, goToSignUpPage } from "../../router/coordinator"
 
 function LoginPage(){
   const navigate = useNavigate()
@@ -57,7 +58,7 @@ function LoginPage(){
                     <p>Senha</p>
                     <input/>
 
-                    <button><h1>&gt;</h1></button>
+                    <button onClick={()=>goToHomePage(navigate)}><h1>&gt;</h1></button>
                 </div>
                 <div className="box-style-continue">
                     <div></div>
@@ -77,7 +78,7 @@ function LoginPage(){
                         <img src={facebook_button} alt="botao_login_facebook"/>
                         <img src={apple_button} alt="botao_login_apple"/>
                     </div>
-                    <p>Já tem uma conta? <a href="#">Entrar</a></p>
+                    <p>Já tem uma conta? <a onClick={()=>goToSignUpPage(navigate)}>Entrar</a></p>
 
                 </StyleBoxSocialLinks>
 

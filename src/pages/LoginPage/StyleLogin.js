@@ -129,6 +129,10 @@ export const StyleBoxLogin = styled.div`
             margin-bottom: 40px;
         }
 
+        button:hover{
+            cursor: pointer;
+        }
+
     }
 
     .box-style-continue{
@@ -154,6 +158,10 @@ export const StyleBoxSocialLinks = styled.div`
     padding-top: 40px;
     width: 100%;
     text-align: center;
+
+    img:hover{
+        cursor: pointer;
+    }
 
     div{
         display: flex;

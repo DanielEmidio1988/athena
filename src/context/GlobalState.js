@@ -1,8 +1,11 @@
-// import { useState, useEffect } from "react"
+import { useState } from "react"
 
 function GlobalState(){
-    return{
+    const [roleUser, setRoleUser] = useState("student")
 
+    return{
+        roleUser,
+        setRoleUser,
     }
 }
 
