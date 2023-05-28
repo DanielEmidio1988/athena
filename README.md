@@ -7,7 +7,7 @@ A Athena é uma plataforma web inovadora que possui uma gama de materiais e ment
 Além disso, também ter materiais de aprendizado em tecnologia disponíveis para aqueles que queiram usar e compartilhar com outras pessoas.
 
 ## 🔗Link de Acesso
-- Deploy Vercel: [clique aqui!](https://athena-hh51dynbw-danielemidio1988.vercel.app/)
+- Deploy Vercel: [clique aqui!](https://athena-jet.vercel.app/)
 - Layout Figma: [clique aqui!](https://www.figma.com/file/0qSn6LRizzOON0A4fd65qh/HACKA?type=design&node-id=41-40&t=4SemDPvhUNNLc40W-0)
 
 
