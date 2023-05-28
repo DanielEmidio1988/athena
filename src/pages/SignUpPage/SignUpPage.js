@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react"
 import { useContext } from "react"
 import { GlobalContext } from "../../context/GlobalContext"
+import { goToLoginPage, goToHomePage } from "../../router/coordinator"
+import { useNavigate } from "react-router-dom"
 import photo from "../../assets/material-symbols_add-a-photo.png"
-import { ContainerSignUp, StyleBoxForm, StyleBoxDesire, StyleDesireSelect } from "./StyleSignUpPage"
+import { ContainerSignUp, StyleBoxForm, StyleBoxDesire, StyleDesireSelect, StyleBoxButtons } from "./StyleSignUpPage"
 import button_desejo_aprender_especialistas from "../../assets/heroicons_puzzle-piece-20-solid.png"
 import button_desejo_compartilhar from "../../assets/heroicons-solid_share.png"
 import button_desejo_ensinar from "../../assets/fa-solid_chalkboard-teacher.png"
@@ -12,6 +14,7 @@ import button_desejo_aprender_especialista_ativo from "../../assets/heroicons_pu
 function SignUpPage(){
 
     const context = useContext(GlobalContext)
+    const navigate = useNavigate()
     const [iconsDesire, setIconsDesire] = useState([
         {image: button_desejo_aprender,
         description: "Desejo aprender",
@@ -144,6 +147,11 @@ function SignUpPage(){
                         )
                     })}                                             
                 </div>
+            <StyleBoxButtons
+            roleUser={context.roleUser}>
+                <button onClick={()=>goToLoginPage(navigate)}>Voltar</button>
+                <button onClick={()=>goToHomePage(navigate)}>Avançar</button>
+            </StyleBoxButtons>
 
             </StyleBoxDesire> 
             <StyleDesireSelect>

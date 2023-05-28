@@ -8,6 +8,7 @@ export const ContainerPages = styled.section`
 
     .box-menu-lateral{
         width: 30%;
+        height: 100%;
     }
 
     .box-main-menu{
@@ -71,13 +72,11 @@ export const ContainerPages = styled.section`
                 .disable-icon{
                     color: rgba(30,30,30,0.38)
                 }
-
             }
         }
 
         .box-progress-user{
-            margin: 120px 0 40px 0;
-
+            margin: 100px 0 40px 0;
 
             .total-points-user{
                 display: flex;

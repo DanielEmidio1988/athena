@@ -174,4 +174,8 @@ export const StyleBoxSocialLinks = styled.div`
         margin-top: 20px;
         color: #fff;
     }
+
+    p a:hover{
+        cursor: pointer;
+    }
 `

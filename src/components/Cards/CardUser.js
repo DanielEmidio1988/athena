@@ -8,10 +8,19 @@ function CardUser(){
         <ContainerCardUser
         roleUser={context.roleUser}>
             <div>
-                <h3>Aula Sobre X</h3>
+                {context.roleUser === "mentor" ?
+                    <h3>Material de apoio sobre X</h3>
+                :
+                    <h3>Aula sobre X</h3>}
+                
                 <p>Descrição da aula</p>
             </div>
-            <button>Assistir</button>
+
+            {context.roleUser === "mentor" ?
+                    <button>Acessar</button>
+                :
+                    <button>Assistir</button>}
+            
         </ContainerCardUser>
     )
 }

@@ -43,8 +43,6 @@ function LoginPage(){
                       </div>
                     )
                   })}
-
-
               </div>
 
             </StyleBoxAboutSite>
@@ -67,18 +65,13 @@ function LoginPage(){
                 </div>
     
                 <StyleBoxSocialLinks>
-                    {/* <div className="social_links_mobile">
-                        <img src={google_button_mobile} alt="botao_login_google"/>
-                        <img src={facebook_button_mobile} alt="botao_login_facebook"/>
-                        <img src={apple_button_mobile} alt="botao_login_apple"/>
-                    </div> */}
                   
                     <div className="social_links">
                         <img src={google_button} alt="botao_login_google"/>
                         <img src={facebook_button} alt="botao_login_facebook"/>
                         <img src={apple_button} alt="botao_login_apple"/>
                     </div>
-                    <p>Já tem uma conta? <a onClick={()=>goToSignUpPage(navigate)}>Entrar</a></p>
+                    <p>Já tem uma conta? <a onClick={()=>goToSignUpPage(navigate)}>Cadastre-se</a></p>
 
                 </StyleBoxSocialLinks>
 

@@ -2,10 +2,8 @@ import styled from "styled-components";
 
 export const ContainerSignUp = styled.section`
     width: 100%;
-    // height: 100vh;
     display: flex;
     justify-content: space-evenly;
-    // align-items: center;
     flex-direction: column;
     margin-top: 200px;
 
@@ -78,7 +76,6 @@ export const StyleBoxForm = styled.div`
     .box-photo-user{
         width: 40%;
        
-        
         .border-photo{
             border-radius: 50%;
             width: 240px;
@@ -88,13 +85,38 @@ export const StyleBoxForm = styled.div`
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
             .area-photo{
-                border-radius: 50%;
-                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%; 
                 width: 100%;
                 height: 100%;
                 background-color: #E1E1E1;
             }
         }
+    }
+`
+
+export const StyleBoxButtons = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    align-itens: center;
+    width: 80%;
+    height: 10vh;
+    margin: 40px 0 40px 0;
+
+    button{
+        width: 90px;
+        height: 30px;
+        background: ${props=> props.roleUser !== "student-special" ? "linear-gradient(169.14deg, #00203F 20%, #6ECAA1 100%)" : "#453EC8"};
+        border: none;
+        color: #fff;
+        margin-bottom: 20px;
+        border-radius: 60px;
+    }
+
+    button:hover{
+        cursor: pointer;
     }
 `
 
@@ -142,6 +164,14 @@ export const StyleBoxDesire = styled.div`
         }
 
         .active-icon{
+            background: ${props=> props.roleUser !== "student-special" ? "rgba(110, 202, 161, 0.45)" : "#453EC8" };
+        }
+
+        .active-icon h2{
+            color: ${props => props.roleUser === "student-special" ? "#fff" : "#00203F"};
+        }
+
+        .active-icon:hover{
             background: ${props=> props.roleUser !== "student-special" ? "rgba(110, 202, 161, 0.45)" : "#453EC8" };
         }
     }

@@ -21,13 +21,23 @@ function HomePage(){
                         <img src={homeiconspecial} alt="Icone HomePage"/>
                     :
                         <img src={homeicon} alt="Icone HomePage"/>
-                    }    
-                    <h1>Aulas</h1>
+                    } 
+                    {context.roleUser === "mentor" ?
+                        <h1>Material de Apoio</h1>
+                    :
+                        context.roleUser === "helper" ? 
+                            <h1>Conteúdo</h1>
+                        :
+                            <h1>Aulas</h1>
+                    }   
+                    
                 </div>
                 <div className="box-input-data">
                     <input placeholder="Buscar aula"/>
                 </div>
                 <div className="box-data-page">
+                    <CardUser/>
+                    <CardUser/>
                     <CardUser/>
                 </div>
             </div>
