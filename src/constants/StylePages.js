@@ -138,6 +138,11 @@ export const ContainerPages = styled.section`
                     display: flex;
                     gap: 20px;
                     margin-bottom: 20px;
+                    align-items: center;
+
+                    img{
+                        width: 40px;
+                    }
                 }
 
                 .status-user{

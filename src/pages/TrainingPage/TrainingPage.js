@@ -1,13 +1,12 @@
-import CardUser from "../../components/Cards/CardUser"
 import LateralMenu from "../../components/LateralMenu/LateralMenu"
 import { ContainerPages } from "../../constants/StylePages"
-import homeicon from "../../assets/iconamoon_home-fill.png"
-import homeiconspecial from "../../assets/iconamoon_home-fill-special.png"
+import cardtraining1 from "../../assets/cardtraining1.png"
+import cardtraining2 from "../../assets/cardtraining2.png"
+import trainingicon from "../../assets/ion_book.png"
 import { useContext } from "react"
 import { GlobalContext } from "../../context/GlobalContext"
 
-
-function HomePage(){
+function TrainingPage(){
     const context = useContext(GlobalContext)
 
     return(
@@ -17,18 +16,18 @@ function HomePage(){
             </div>
             <div className="box-main-menu">
                 <div className="box-title-page">
-                    {context.roleUser === "student-special" ?
-                        <img src={homeiconspecial} alt="Icone HomePage"/>
-                    :
-                        <img src={homeicon} alt="Icone HomePage"/>
-                    }    
-                    <h1>Aulas</h1>
+                    <img src={trainingicon} alt="Icone MentorPage"/>
+                    <h1>Capacitações</h1>
                 </div>
                 <div className="box-input-data">
                     <input placeholder="Buscar aula"/>
+                    <div>
+                        <h3 className='active-icon'>Recomendados</h3>
+                    </div>
                 </div>
                 <div className="box-data-page">
-                    <CardUser/>
+                <img src={cardtraining1} alt="Icone TrainingPage"/>
+                <img src={cardtraining2} alt="Icone TrainingPage"/>
                 </div>
             </div>
         
@@ -36,4 +35,4 @@ function HomePage(){
     )
 }
 
-export default HomePage
+export default TrainingPage

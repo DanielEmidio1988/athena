@@ -1,11 +1,15 @@
 import { ContainerCardConquest } from "./StyleCardConquest"
 
-function CardConquest(){
+function CardConquest(props){
+    console.log(props)
+
     return(
         <ContainerCardConquest>
-            <img src={''} alt="card-conquistas"/>
-            <p>GIFT Card iFood</p>
-            <p>500 pontos</p>
+            <div>
+                <img src={props.giftcard.icon} alt="card-conquistas"/>
+            </div>
+            <p>GIFT Card {props.giftcard.name}</p>
+            <p>{props.giftcard.points} pontos</p>
         </ContainerCardConquest>
     )
 }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import backgroundlogin from "../../assets/backgroundlogin.png"
 
 export const ContainerLogin = styled.section`
     width: 100%;
@@ -53,7 +54,7 @@ export const StyleBoxAboutSite = styled.div`
         div{
             width: 240px;
             height: 230px;
-            font-size: 24px;
+            font-size: 20px;
             text-align: center;
             font-weight: 600;
 
@@ -72,13 +73,12 @@ export const StyleBoxLogin = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
-    background: linear-gradient(169.14deg, #00203F 14.54%, #6ECAA1 92.36%);
+    background: url(${backgroundlogin}) no-repeat right;
+    background-size: 100% auto;
 
     .box_form_login{
         display: flex;
         justify-content: center;
-        // align-items: center;
         flex-direction: column;
         
         h1{

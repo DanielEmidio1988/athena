@@ -23,3 +23,7 @@ export const goToSchedulesPage = (navigate)=>{
 export const goToTimeLinePage = (navigate)=>{
     navigate("/cronograma")
 }
+
+export const goToTrainingPage = (navigate)=>{
+    navigate("/capacitacao")
+}

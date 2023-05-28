@@ -25,6 +25,13 @@ export const ContainerProgressCard = styled.div`
             border-radius: 50%;
             background: #6ECAA1;
         }
+
+        div{
+            margin: 0 auto;
+            text-align: center;
+            font-size: 12px;
+            width: 150px;
+        }
     }
 
 `

@@ -17,7 +17,7 @@ function LoginPage(){
 
   const icons_login = [
     {image: compartilhe_icon,
-    description: "Compartilhe e ensine materiais de tecnologia"},
+    description: "Compartilhe materiais de tecnologia"},
     {image: apoie_icon,
     description: "Apoie como um mentor"},
     {image: apoie_mentor_icon,
@@ -30,7 +30,7 @@ function LoginPage(){
         <ContainerLogin>
             <StyleBoxAboutSite>
               <div className="box_about">
-                <h1>Olá, o que te traz ao XXX?</h1>
+                <h1>Olá, o que te traz a Athena?</h1>
                 <h3>Faça parte de uma comunidade onde você pode criar conexões entre mentorando e mentor e aprender sobre tecnologia da melhor forma.</h3>
 
               </div>

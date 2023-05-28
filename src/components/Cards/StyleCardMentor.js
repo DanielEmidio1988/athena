@@ -19,6 +19,7 @@ export const ContainerCardMentor = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        margin-top: 40px;
     }
 
     div h3{
@@ -39,7 +40,7 @@ export const ContainerCardMentor = styled.div`
     button{
         width: 90px;
         height: 30px;
-        background: linear-gradient(169.14deg, #00203F 20%, #6ECAA1 100%);
+        background: ${props=> props.roleUser !== "student-special" ? "linear-gradient(169.14deg, #00203F 20%, #6ECAA1 100%)" : "#453EC8"};
         border: none;
         color: #fff;
         margin-bottom: 20px;

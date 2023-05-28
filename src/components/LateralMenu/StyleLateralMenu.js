@@ -7,6 +7,9 @@ export const ContainerLateralMenu = styled.div`
 
     div{
         width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
     }
 
     .box-display-user{
@@ -15,13 +18,20 @@ export const ContainerLateralMenu = styled.div`
 
         div h3{
             font-size: 25px;
-            font-weight: 600,
+            font-weight: 600,     
         }
 
         div p{
             font-size: 20px;
             font-weight: 400;
         }
+
+        div{
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 20px;
+        }
+
     }
 
     div img{
@@ -33,19 +43,19 @@ export const ContainerLateralMenu = styled.div`
         padding-left: 10px;
         font-size: 32px;
         font-weight: 400;
-        // transition: transform .2s;
+        transition: background .2s;
         width: 80%;
     }
 
     div h1:hover{
         cursor: pointer;
-        background: linear-gradient(169.14deg, #00203F 20%, #6ECAA1 100%);
+        background: ${props=> props.roleUser !== "student-special" ? "linear-gradient(169.14deg, #00203F 20%, #6ECAA1 100%)" : "#453EC8"};
         border-radius: 60px;
         color: #fff;
     }
 
     div .current_page{
-        background: linear-gradient(169.14deg, #00203F 20%, #6ECAA1 100%);
+        background: ${props=> props.roleUser !== "student-special" ? "linear-gradient(169.14deg, #00203F 20%, #6ECAA1 100%)" : "#453EC8"};
         border-radius: 60px;
         color: #fff;
     }

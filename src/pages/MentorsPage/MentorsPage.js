@@ -1,14 +1,15 @@
 import { useState } from "react"
-import CardConquest from "../../components/Cards/CardConquest"
 import LateralMenu from "../../components/LateralMenu/LateralMenu"
 import { ContainerPages } from "../../constants/StylePages"
 import CardMentor from "../../components/Cards/CardMentor"
 import CardMyMentor from "../../components/Cards/CardMyMentor"
-
-
+import mentoricon from "../../assets/fa-solid_chalkboard-teacher-32.png"
+import mentoriconspecial from "../../assets/fa-solid_chalkboard-teacher-special.png"
+import { useContext } from "react"
+import { GlobalContext } from "../../context/GlobalContext"
 
 function MentorsPage(){
-
+    const context = useContext(GlobalContext)
     const [optionMentor, setOptionMentor] = useState([
         {name: "Todos",
         status: true},
@@ -16,7 +17,6 @@ function MentorsPage(){
         status: false},
     ])
     const [displayMentor, setDisplayMentor] = useState("Todos")
-
     const selectDisplayMentor = (option) =>{
         setDisplayMentor(option.name)
         if(!option.status){
@@ -30,8 +30,7 @@ function MentorsPage(){
                 }
             }
             setOptionMentor(newStatus)
-        }
-        
+        }     
     }
 
     return(
@@ -41,7 +40,11 @@ function MentorsPage(){
             </div>
             <div className="box-main-menu">
                 <div className="box-title-page">
-                    <img src={''} alt="Foto Usuario"/>
+                    {context.roleUser === "student-special" ?
+                        <img src={mentoriconspecial} alt="Icone MentorPage"/>
+                    :
+                        <img src={mentoricon} alt="Icone MentorPage"/>
+                    }
                     <h1>Mentores</h1>
                 </div>
                 <div className="box-input-data">

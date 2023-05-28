@@ -1,31 +1,40 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useContext } from "react"
+import { GlobalContext } from "../../context/GlobalContext"
+import photo from "../../assets/material-symbols_add-a-photo.png"
 import { ContainerSignUp, StyleBoxForm, StyleBoxDesire, StyleDesireSelect } from "./StyleSignUpPage"
 import button_desejo_aprender_especialistas from "../../assets/heroicons_puzzle-piece-20-solid.png"
 import button_desejo_compartilhar from "../../assets/heroicons-solid_share.png"
 import button_desejo_ensinar from "../../assets/fa-solid_chalkboard-teacher.png"
 import button_desejo_aprender from "../../assets/fluent_people-community-24-filled.png"
+import button_desejo_aprender_especialista_ativo from "../../assets/heroicons_puzzle-piece-20-solid-gold.png"
 
 function SignUpPage(){
 
+    const context = useContext(GlobalContext)
     const [iconsDesire, setIconsDesire] = useState([
         {image: button_desejo_aprender,
         description: "Desejo aprender",
+        module: "student",
         status: false},
         {image: button_desejo_ensinar,
         description: "Desejo ensinar",
+        module: "mentor",
         status: false},
         {image: button_desejo_aprender_especialistas,
         description: "Desejo aprender com apoio de especialistas",
+        module: "student-special",
         status: false},
         {image: button_desejo_compartilhar,
         description: "Desejo compartilhar conteúdos",
+        module: "helper",
         status: false},
-
     ])
     const [optionDesire, setOptionDesire] = useState("")
 
     const selectIcon = (optionSelect) =>{
         optionSelect.description === optionDesire? setOptionDesire("") : setOptionDesire(optionSelect.description)
+        context.setRoleUser(optionSelect.module)
         if(!optionSelect.status){
             const newStatus = [...iconsDesire]
             
@@ -38,8 +47,21 @@ function SignUpPage(){
             }
             setIconsDesire(newStatus)
         }
-        
     }
+
+    useEffect(()=>{
+
+        const updatedIconsDesire = [...iconsDesire];
+
+        if (context.roleUser === "student-special") {
+          updatedIconsDesire[2].image = button_desejo_aprender_especialista_ativo
+        } else {
+          updatedIconsDesire[2].image = button_desejo_aprender_especialistas
+        }
+      
+        setIconsDesire(updatedIconsDesire)
+
+    },[context.roleUser])
 
     return(
         <ContainerSignUp>
@@ -100,13 +122,14 @@ function SignUpPage(){
                     
                     <div className="border-photo">
                         <div className="area-photo">
-
+                            <img src={photo} alt="photo-perfil"/>
                         </div>
                     </div>
 
                 </div>
             </StyleBoxForm>
-            <StyleBoxDesire>
+            <StyleBoxDesire
+            roleUser={context.roleUser}>
                 <div className="box-title-desire">
                     <h2>O que você deseja?</h2>
                 </div>

@@ -6,6 +6,7 @@ import ConquestPage from "../pages/ConquestPage/ConquestPage"
 import MentorsPage from "../pages/MentorsPage/MentorsPage"
 import SchedulesPage from "../pages/SchedulePage/SchedulePage"
 import TimeLinePage from "../pages/TimeLinePage/TimeLinePage"
+import TrainingPage from "../pages/TrainingPage/TrainingPage"
 
 function Router(){
     return(
@@ -18,6 +19,7 @@ function Router(){
                 <Route path="/mentores" element={<MentorsPage/>}/>
                 <Route path="/agenda" element={<SchedulesPage/>}/>
                 <Route path="/cronograma" element={<TimeLinePage/>}/>
+                <Route path="/capacitacao" element={<TrainingPage/>}/>
             </Routes>
         </BrowserRouter>
     )

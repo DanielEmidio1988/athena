@@ -142,7 +142,7 @@ export const StyleBoxDesire = styled.div`
         }
 
         .active-icon{
-            background: rgba(110, 202, 161, 0.45)
+            background: ${props=> props.roleUser !== "student-special" ? "rgba(110, 202, 161, 0.45)" : "#453EC8" };
         }
     }
 
