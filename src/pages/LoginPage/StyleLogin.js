@@ -52,14 +52,14 @@ export const StyleBoxAboutSite = styled.div`
         gap: 40px;
 
         div{
-            width: 240px;
-            height: 230px;
-            font-size: 20px;
+            width: 200px;
+            height: 190px;
+            font-size: 14px;
             text-align: center;
             font-weight: 600;
 
             img{
-                width: 112px;
+                width: 100px;
             }
         }
 
