@@ -23,7 +23,7 @@ export const ContainerCardMentor = styled.div`
     }
 
     div h3{
-        margin-top: 120px;
+        margin-top: 12vh;
         font-size: 20px;
         font-weight: 600;
     }

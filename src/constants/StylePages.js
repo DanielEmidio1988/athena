@@ -34,7 +34,7 @@ export const ContainerPages = styled.section`
 
             p{
                 color: rgba(30, 30, 30, 0.38);
-                font-size: 15px;
+                font-size: 12px;
             }
         }
 
@@ -76,7 +76,7 @@ export const ContainerPages = styled.section`
         }
 
         .box-progress-user{
-            margin: 100px 0 40px 0;
+            margin: 10vh 0 4vh 0;
 
             .total-points-user{
                 display: flex;
@@ -85,7 +85,7 @@ export const ContainerPages = styled.section`
 
                 h1{
                     font-weight: 700;
-                    font-size: 36px;
+                    font-size: 28px;
                     color: #535353;
                 }
 
@@ -111,13 +111,13 @@ export const ContainerPages = styled.section`
     .box-calendar-page{
 
         div h2{
-            margin-bottom: 40px;
-            font-size: 32px;
+            margin-bottom: 4vh;
+            font-size: 24px;
             font-weight: 400;
         }
 
         img{
-            width: 44vw;
+            width: 40vw;
         }
 
         .icons-calendar{

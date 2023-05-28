@@ -3,9 +3,8 @@ import styled from "styled-components";
 export const ContainerCardConquest = styled.div`
     background: #F5F5F5;
     border-radius: 10px;
-    width: 180px;
-    height: 250px;
-    // padding: 10px;
+    width: 8.5vw;
+    height: 24vh;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: 1px solid #D9D9D9;
     display: flex;

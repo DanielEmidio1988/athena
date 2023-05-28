@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const ContainerProgressCard = styled.div`
-    margin-bottom: 40px;
+    margin-bottom: 4vh;
 
     .title-progress{
-        margin-bottom: 20px;
+        margin-bottom: 2vh;
 
         h1{
             color: #535353;
             font-weight: 400;
-            font-size: 24px;
+            font-size: 20px;
         }
     }
 
@@ -31,6 +31,10 @@ export const ContainerProgressCard = styled.div`
             text-align: center;
             font-size: 12px;
             width: 150px;
+
+            img{
+                width: 4vw;
+            }
         }
     }
 
