@@ -18,7 +18,7 @@ export const ContainerPages = styled.section`
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            margin: 60px 0 30px 0;
+            margin: 6vh 0 2vh 0;
 
             h1{
                 margin-left: 40px;
@@ -116,6 +116,10 @@ export const ContainerPages = styled.section`
             font-weight: 400;
         }
 
+        img{
+            width: 44vw;
+        }
+
         .icons-calendar{
             display: flex;
             justify-content: space-between;
@@ -124,8 +128,8 @@ export const ContainerPages = styled.section`
             margin-bottom: 40px;
 
             .box-calendar-user{
-                width: 316px;
-                height: 192px;
+                width: 16vw;
+                height: 16vh;
                 padding-left: 32px;
                 border: 1px solid #D9D9D9;
                 border-radius: 12px;

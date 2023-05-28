@@ -41,7 +41,7 @@ export const ContainerLateralMenu = styled.div`
     div h1{
         margin-left: 20px;
         padding-left: 10px;
-        font-size: 32px;
+        font-size: 24px;
         font-weight: 400;
         transition: background .2s;
         width: 80%;

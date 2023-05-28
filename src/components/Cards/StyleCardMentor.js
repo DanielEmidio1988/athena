@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const ContainerCardMentor = styled.div`
     background: #F5F5F5;
     border-radius: 10px;
-    width: 336px;
-    height: 432px;
+    width: 18vw;
+    height: 42vh;
     padding: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: 1px solid #D9D9D9;
