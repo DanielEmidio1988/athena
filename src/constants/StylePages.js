@@ -95,7 +95,6 @@ export const ContainerPages = styled.section`
                     color: #535353;
                 }
             }
-
         }
 
         .box-data-page{

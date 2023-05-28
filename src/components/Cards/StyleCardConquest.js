@@ -13,7 +13,7 @@ export const ContainerCardConquest = styled.div`
     flex-direction: column;
 
     p{
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 400;
         color: RGBA(30,30,30,0.38);
         margin: 0 0 10px 10px;
@@ -26,9 +26,9 @@ export const ContainerCardConquest = styled.div`
         justify-content: center;
         align-items: center;
 
-        // img{
-        //     width: 162
-        // }
+        img{
+            width: 94%;
+        }
     }
 
 `

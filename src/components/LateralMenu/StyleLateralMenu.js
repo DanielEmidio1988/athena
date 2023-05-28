@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const ContainerLateralMenu = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     background-color: #E1E1E1;
 
     div{
