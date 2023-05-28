@@ -40,7 +40,7 @@ export const StyleBoxForm = styled.div`
 
         .box_data_form{
             .input-very-large{
-                width: 650px;
+                width: 28vw;
 
                 input{
                     width: 100%;
@@ -48,7 +48,7 @@ export const StyleBoxForm = styled.div`
             }
 
             .input-large{
-                width: 180px;
+                width: 10vw;
 
                 input{
                     width: 100%;
@@ -56,7 +56,7 @@ export const StyleBoxForm = styled.div`
             }
 
             .input-medium{
-                width: 150px;
+                width: 10vw;
 
                 input{
                     width: 100%;
@@ -64,7 +64,7 @@ export const StyleBoxForm = styled.div`
             }
 
             .input-small{
-                width: 60px;
+                width: 4vw;
 
                 input{
                     width: 100%;
@@ -201,7 +201,7 @@ export const StyleDesireSelect = styled.div`
     }
 
     .box_input_A div input, .box_input_B div input{ 
-        width: 650px; 
+        width: 32vw; 
         background: #E1E1E1;
         height: 38px;
         border-radius: 600px;
