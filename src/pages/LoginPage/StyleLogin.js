@@ -26,7 +26,7 @@ export const StyleBoxAboutSite = styled.div`
 
         h1{
             font-weight: 600;
-            font-size: 40px;
+            font-size: 32px;
             line-height: 60px;
             background: linear-gradient(169.14deg, #00203F 14.54%, #6ECAA1 92.36%);
             -webkit-background-clip: text;
@@ -38,7 +38,7 @@ export const StyleBoxAboutSite = styled.div`
 
         h3{
             font-weight: 600;
-            font-size: 20px;
+            font-size: 18px;
         }
     }
 
@@ -52,14 +52,17 @@ export const StyleBoxAboutSite = styled.div`
         gap: 40px;
 
         div{
-            width: 200px;
-            height: 190px;
-            font-size: 14px;
+            width: 10vw;
+            height: 10vh;
             text-align: center;
             font-weight: 600;
 
             img{
-                width: 100px;
+                width: 6vw;
+            }
+
+            p{
+                font-size: 14px;
             }
         }
 
